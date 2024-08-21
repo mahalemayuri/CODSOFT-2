@@ -1,0 +1,78 @@
+#To perform arithmetic operations
+#Addition of two numbers
+
+
+def add(x,y):
+    return x + y
+
+#Subtraction of two numbers
+def sub(x,y):
+    return x - y
+
+#Multiplication of two numbers
+def mul(x,y):
+    
+    return x * y
+
+#Division of two numbers
+def div(x,y):
+    if y !=0:
+
+        return x / y
+    else:
+        return "error division by zero"
+
+#Select operation to perform task on calculator
+def calculator():
+    
+    print("select operation")
+    print("1.Add")
+    print("2.Sub")
+    print("3.Mul")
+    print("4.divide")
+
+    #To get input choice
+    choice=input("enter choice(1/2/3/4):")
+
+    if choice in['1','2','3','4']:
+        num1=float(input("enter first num:"))
+
+        num2=float(input("enter second num"))
+
+    
+
+        if choice =='1':
+            print(f"{num1}+{num2}={add(num1,num2)}")
+
+        elif choice =='2':
+            print(f"{num1}-{num2}={sub(num1,num2)}")
+
+        elif choice =='3':
+            print(f"{num1}*{num2}={mul(num1,num2)}")
+
+        elif choice =='4':
+            result=divide(num1,num2)
+
+            if result =="error! division by zero":
+                print(result)   
+            else:
+                print(f"{num1}/{num2}={result}") 
+    else:
+       
+       print("invalid input")
+calculator()                       
+
+
+
+
+
+PS C:\Users\HP\OneDrive\Desktop\python_pr> & C:/Users/HP/AppData/Local/Programs/Python/Python312/python.exe c:/Users/HP/OneDrive/Desktop/python_pr/calci.py
+select operation
+1.Add
+2.Sub
+3.Mul
+4.divide
+enter choice(1/2/3/4):2
+enter first num:2
+enter second num3
+2.0-3.0=-1.0
